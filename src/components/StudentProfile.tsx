@@ -14,8 +14,10 @@ import {
   Phone,
   MapPin,
   Calendar,
-  FileText
+  FileText,
+  Search
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -123,6 +125,16 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ student }) => {
   return (
     <div className="min-h-screen bg-background p-6 space-y-6">
       <div className="max-w-6xl mx-auto">
+        {/* Quick Actions */}
+        <div className="flex justify-end mb-6">
+          <Link to="/jobs">
+            <Button className="flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
+              <Search className="h-4 w-4" />
+              Search Jobs
+            </Button>
+          </Link>
+        </div>
+
         {/* Hero Section */}
         <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
           <CardContent className="p-8">
