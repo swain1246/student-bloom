@@ -126,11 +126,17 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ student }) => {
     <div className="min-h-screen bg-background p-6 space-y-6">
       <div className="max-w-6xl mx-auto">
         {/* Quick Actions */}
-        <div className="flex justify-end mb-6">
+        <div className="flex justify-end gap-3 mb-6">
           <Link to="/jobs">
             <Button className="flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
               <Search className="h-4 w-4" />
               Search Jobs
+            </Button>
+          </Link>
+          <Link to="/applications">
+            <Button variant="outline" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
+              <FileText className="h-4 w-4" />
+              My Applications
             </Button>
           </Link>
         </div>
