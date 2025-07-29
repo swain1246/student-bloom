@@ -8,6 +8,7 @@ import JobSearch from "./pages/JobSearch";
 import MyApplications from "./pages/MyApplications";
 import MentorDashboard from "./pages/MentorDashboard";
 import MentorProfile from "./pages/MentorProfile";
+import Invitations from "./pages/Invitations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/jobs" element={<JobSearch />} />
           <Route path="/applications" element={<MyApplications />} />
+          <Route path="/invitations" element={<Invitations />} />
           <Route path="/mentor-dashboard" element={<MentorDashboard />} />
           <Route path="/mentor-profile" element={<MentorProfile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
